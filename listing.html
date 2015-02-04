@@ -498,7 +498,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.goog
 
 <!-- popular products -->
 
-<section class="widget" id="sidebar-popular-products">
+<section class="widget popular-products-sidebar" id="sidebar-popular-products">
     <div class="widget-header" data-helptip-body="" data-helptip-description-body="" data-helptip-uri="true">
         <h2>Popularne produkty</h2>
     </div>
@@ -1345,7 +1345,180 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.goog
  </div>
  <div id="listing-banner" class="fb listing-banner">
   </div>
- <div id="listing" class="listing " data-is-live-search-active="1" data-popup="{&quot;token&quot;:&quot;f631afeacd2aceed1a03978919682cb0&quot;,&quot;cartid&quot;:&quot;&quot;}" data-txt="{&quot;samplePhoto&quot;:&quot;zdjęcie poglądowe&quot;,&quot;loading&quot;:&quot;Ładowanie&quot;,&quot;tabLoadingError&quot;:&quot;Nieznany błąd. Spróbuj ponownie później.&quot;}" data-catcounters="{&quot;110017&quot;:180,&quot;93193&quot;:442,&quot;46096&quot;:3266,&quot;46097&quot;:2982,&quot;93195&quot;:220,&quot;93197&quot;:173,&quot;110016&quot;:353,&quot;93194&quot;:167,&quot;17865&quot;:62140,&quot;17866&quot;:166,&quot;19535&quot;:820,&quot;17867&quot;:2336,&quot;17868&quot;:2397,&quot;93562&quot;:254,&quot;93196&quot;:510,&quot;93198&quot;:798,&quot;17863&quot;:9685}" data-totalcounter="86889 ofert" data-headtitle="Klocki - Allegro.pl - Więcej niż aukcje. Najlepsze oferty na największej platformie handlowej." data-excludedparameters="[&quot;ev_campaign&quot;,&quot;ev_campid&quot;,&quot;ev_ln&quot;,&quot;ev_crx&quot;,&quot;ev_mt&quot;,&quot;ev_n&quot;,&quot;ev_pl&quot;,&quot;ev_pos&quot;,&quot;ev_dvc&quot;,&quot;ev_dvm&quot;,&quot;ev_adgr&quot;,&quot;ev_content&quot;,&quot;network&quot;,&quot;url&quot;,&quot;utm_source&quot;,&quot;utm_medium&quot;,&quot;utm_campaign&quot;,&quot;utm_add&quot;,&quot;utm_label&quot;,&quot;utm_offer_id&quot;,&quot;utm_content&quot;,&quot;utm_term&quot;,&quot;utm_id&quot;,&quot;utm_nooverride&quot;,&quot;sourceid&quot;,&quot;bi_s&quot;,&quot;bi_m&quot;,&quot;bi_c&quot;,&quot;bi_lpm&quot;,&quot;bi_lps&quot;,&quot;bi_lpc&quot;,&quot;bi_lpx&quot;,&quot;bi_lpy&quot;,&quot;bi_lpz&quot;,&quot;gclid&quot;]">
+
+ <div id="listing" class="listing">
+ <!-- popular products -->
+    <style>
+        .popular-products-with-prices {
+            margin-left: -16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bottom-separator:after{
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            content:'';
+            display:block;
+            height:1px;
+            margin:1px 0 7px;
+            background:#D6D6D6;
+            background:#d6d6d6 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+            background:-moz-linear-gradient(left,#fff 0,#d6d6d6 15%,#d6d6d6 85%,#fff 100%);
+            background:-webkit-linear-gradient(left,#fff 0,#d6d6d6 15%,#d6d6d6 85%,#fff 100%);
+            background:-o-linear-gradient(left,#fff 0,#d6d6d6 15%,#d6d6d6 85%,#fff 100%);
+            background:-ms-linear-gradient(left,#fff 0,#d6d6d6 15%,#d6d6d6 85%,#fff 100%);
+            background:linear-gradient(to right,#fff 0,#d6d6d6 15%,#d6d6d6 85%,#fff 100%);
+        }
+
+        .popular-elements-list {
+            margin: 0;
+            padding: 0 0 17px 0;
+        }
+
+        .popular-elements-list li {
+            list-style: none;
+            display: inline-block;
+            font-size: 13px;
+            padding: 0 10px;
+            text-align: center;
+            width: 19.5%;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;         /* Opera/IE 8+ */
+        }
+
+        .popular-elements-list li .image-wrapper {
+            height: 110px;
+            position: relative;
+        }
+
+        .popular-elements-list li img {
+            display: block;
+            margin: auto;
+            max-height: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .popular-elements-list li h2 {
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0 0 8px;
+            padding: 0;
+            overflow: hidden;
+            height: 40px;
+        }
+
+        .popular-elements-list li h2 a {
+            display: block;
+            height: 32px;
+            top: -110px;
+            padding: 120px 0 30px;
+            position: relative;
+        }
+
+        .popular-elements-list li span.buy-now {
+            color: #FF5900;
+        }
+
+    </style>
+    <div class="popular-products-with-prices bottom-separator">
+        <ul class="popular-elements-list">
+            <li>
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="http://www.placehold.it/150" alt="">
+                    </a>
+                </div>
+                <h2>
+                    <a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit ameLorem ipsum dolor sit amet lorem ipsum dolor sit amet</a>
+                </h2>
+                <span class="buy-now">
+                    kup teraz
+                </span>
+                <span>
+                    od <strong>1999 zł</strong>
+                </span>
+            </li>
+
+            <li>
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="http://www.placehold.it/300x150" alt="">
+                    </a>
+                </div>
+                <h2>
+                    <a href="#">Lorem ipsum dolor sit amet</a>
+                </h2>
+                <span class="buy-now">
+                    kup teraz
+                </span>
+                <span>
+                    od <strong>1999 zł</strong>
+                </span>
+            </li>
+
+            <li>
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="http://www.placehold.it/150x80" alt="">
+                    </a>
+                </div>
+                <h2>
+                    <a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet</a>
+                </h2>
+                <span class="buy-now">
+                    kup teraz
+                </span>
+                <span>
+                    od <strong>1999 zł</strong>
+                </span>
+            </li>
+
+            <li>
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="http://www.placehold.it/150" alt="">
+                    </a>
+                </div>
+                <h2>
+                    <a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet</a>
+                </h2>
+                <span class="buy-now">
+                    kup teraz
+                </span>
+                <span>
+                    od <strong>1999 zł</strong>
+                </span>
+            </li>
+
+            <li>
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="http://www.placehold.it/150" alt="">
+                    </a>
+                </div>
+                <h2>
+                    <a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet</a>
+                </h2>
+                <span class="buy-now">
+                    kup teraz
+                </span>
+                <span>
+                    od <strong>1999 zł</strong>
+                </span>
+            </li>
+        </ul>
+    </div>
+ <!-- end of popular products -->
+
  <div class="listing-options">
  <div class="listing-views">
  <a class="view-option view-simple" data-view="listing-simple" title="Widok prosty" href="http://allegro.pl/zabawki-klocki-11823#">Widok prosty</a>
