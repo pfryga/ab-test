@@ -400,10 +400,15 @@
 <section>
  <div id="sidebar" class="sidebar">
 
+
+
+
+
+
 <!-- popular products -->
 
-<section class="widget popular-products-sidebar" id="sidebar-popular-products">
-    <div class="widget-header" data-helptip-body="" data-helptip-description-body="" data-helptip-uri="true">
+<!-- <section class="widget popular-products-sidebar" id="sidebar-popular-products">
+    <div class="widget-header">
         <h2>Popularne produkty</h2>
     </div>
     <div class="widget-content">
@@ -452,9 +457,15 @@
         </ul>
         </nav>
     </div>
-</section>
+</section> -->
 
 <!-- end of popular products -->
+
+
+
+
+
+
 
  <section class="widget" id="sidebar-categories" data-current-category-id="11823" data-current-category-name="Klocki" data-root-category-name="Allegro">
  <div class="widget-header" data-helptip-body="" data-helptip-description-body="" data-helptip-uri="true">
@@ -4588,18 +4599,25 @@
 <script>
     // first
     (function() {
-        console.log();
+        console.log('started');
+        var target = document.getElementById('sidebar-categories');
+        var targetParentNode = target.parentNode;
+
+        var contentBlock = document.createElement('div');
+        contentBlock.innerHTML = '<section class="widget popular-products-sidebar" id="sidebar-popular-products"> <div class="widget-header"> <h2>Popularne produkty</h2> </div><div class="widget-content"> <nav class="widget-nav"> <ul> <li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Nokia Asha 108</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Overmax Vertis 3510 You</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Microsoft Lumia 535</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Samsung B2710 Solid</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Samsung S5611</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Samsung Galaxy Xcover 2</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>LG L90</span></span> </a> </li><li class="sidebar-cat"> <a href="http://allegro.pl/#"> <span class="name"><span>Motorola Moto G 2nd Gen</span></span> </a> </li></ul> </nav> </div></section>';
+
+        targetParentNode.insertBefore(contentBlock, target);
     })();
 
-    // second
-    (function() {
-        console.log();
-    })();
+    // // second
+    // (function() {
+    //     console.log();
+    // })();
 
-    // third
-    (function() {
-        console.log();
-    })();
+    // // third
+    // (function() {
+    //     console.log();
+    // })();
 </script>
 
 </body></html>
